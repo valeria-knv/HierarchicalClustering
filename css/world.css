@@ -1,0 +1,169 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
+}
+
+#content {
+    display: flex;
+    flex-direction:column;
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+#map-container {
+    flex: 1;
+}
+
+svg {
+    /* background: #234c75; */
+    /* border: solid black 1px; */
+    border-top: solid white 1px;
+}
+
+.country {
+    stroke: black;
+    stroke-width: 0.1;
+}
+
+#image-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 320px;
+    height: 320px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#image-button img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    background-color: #000;
+}
+
+#image-button .tooltip {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#image-button:hover .tooltip {
+    opacity: 1;
+}
+
+g.button:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.tooltipchart {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    color: #333;
+    max-width: 300px; /* ограничиваем максимальную ширину окна */
+}
+
+.tooltipchart .text {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.tooltipchart .text tspan:first-child {
+    font-weight: bold;
+    color: #007BFF;
+    display: block; /* каждый заголовок на новой строке */
+    margin-bottom: 5px; /* добавлен отступ между заголовком и остальным текстом */
+}
+
+.tooltipchart rect {
+    fill: #fff;
+    stroke-width: 1;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.tooltipchart .axis path,
+.tooltipchart .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.tooltipchart .area {
+    fill: steelblue;
+}
+
+.tooltipchart .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    width: 800px;
+    height: 500px;
+    background-color: #fefefe;
+}
+
+.modal-content2 {
+    position: relative;
+    margin: 5% auto;
+    width: 80%; 
+    max-height: 70%; 
+    background-color: #fefefe;
+    overflow-y: auto; 
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cluster-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cluster-table th, .cluster-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
