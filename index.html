@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/queue.v1.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+        <script src="js/world.js"></script>
+        <script type="text/javascript" src="js/dendrogram.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/world.css" />
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div id="info-panel" class="info-panel">
+            <div id="info-content"></div>
+        </div>
+        <div id="image-button">
+            <img id="openDendrogram" src="data/dendrogram.png" title="Open Dendrogram">
+            <div class="tooltip">Open Dendrogram</div>
+        </div>
+        <div id="myModal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <span class="close">&times;</span>
+                <div id="30ea29ac-3885-4b3c-8290-8dd5d24d6520"></div>
+                <div id="buttons"></div>
+            </div>
+        </div>
+        <div id="myModal2" class="modal">
+            <div id="modal-content2" class="modal-content2">
+                <div id="modal2"></div>
+            </div>
+        </div>
+    </body>
+</html>
